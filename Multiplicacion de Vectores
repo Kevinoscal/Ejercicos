@@ -1,0 +1,39 @@
+package umg.kl.ejercicos;
+
+import java.util.Scanner;
+
+public class Multiplicacion_de_Vectores {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingrese los vectores:");
+        int tamaño = scanner.nextInt();
+        
+        int[] vector1 = new int[tamaño];
+        int[] vector2 = new int[tamaño];
+        
+        System.out.println("Ingrese el vector:");
+        for (int i = 0; i < tamaño; i++) {
+            vector1[i] = scanner.nextInt();
+        }
+        
+        System.out.println("Ingrese el segundo vector:");
+        for (int i = 0; i < tamaño; i++) {
+            vector2[i] = scanner.nextInt();
+        }
+        
+        int[] producto = new int[tamaño];
+        for (int i = 0; i < tamaño; i++) {
+            producto[i] = vector1[i] * vector2[i];
+        }
+        
+        System.out.println("El resultado es:");
+        for (int i = 0; i < tamaño; i++) {
+            System.out.print(producto[i] + " ");
+        }
+        
+        scanner.close();
+    }
+
+}
