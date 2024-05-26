@@ -1,0 +1,41 @@
+package umg.kl.ejercicos;
+
+import java.util.Scanner;
+
+public class Conversion_de_Unidades {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Operacion: ");
+        System.out.println("1. Convertir de kilómetros a metros");
+        System.out.println("2. Convertir de metros a kilómetros");
+        int opcion = scanner.nextInt();
+        
+        if (opcion == 1) {
+            System.out.println("Ingrese kilómetros:");
+            double kilometros = scanner.nextDouble();
+            double millas = convertirKilometrosAMetros(kilometros);
+            System.out.println(kilometros + " kilómetros equivalen a " + metros + " millas.");
+        } else if (opcion == 2) {
+            System.out.println("Ingrese la cantidad de metros:");
+            double metros = scanner.nextDouble();
+            double kilometros = convertirMetrosAKilometros(metros);
+            System.out.println(metros + " metros equivalen a " + kilometros + " kilómetros.");
+        } else {
+            System.out.println("Incorrecto.");
+        }
+        
+        scanner.close();
+    }
+    
+    // Método para convertir kilómetros a metros
+    public static double convertirKilometrosAMetros(double kilometros) {
+        return kilometros * 0.621371;
+    }
+ 
+    public static double convertirMetrosAKilometros(double metros) {
+        return metros / 0.621371;
+    }
+
+}
