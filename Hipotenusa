@@ -1,0 +1,27 @@
+package umg.kl.ejercicos;
+
+import java.util.Scanner;
+
+public class Hipotenusa {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingrese primer numero: ");
+        double numero1 = scanner.nextDouble();
+        
+        System.out.println("Ingrese segundo numero: ");
+        double numero2 = scanner.nextDouble();
+        
+        double hipotenusa = calcularHipotenusa(numero1, numero2);
+        
+        System.out.println("La hipotenusa es: " + hipotenusa);
+        
+        scanner.close();
+    }
+
+    public static double calcularHipotenusa(double numero1, double numero2) {
+        return Math.sqrt(numero1 * numero1 + numero2 * numero2);
+    }
+
+}
