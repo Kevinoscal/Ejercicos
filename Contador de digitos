@@ -1,0 +1,30 @@
+package umg.kl.ejercicos;
+
+import java.util.Scanner;
+
+public class Contador_de_Digitos {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingrese numero: ");
+        int inicial = scanner.nextInt();
+        
+        System.out.println("Ingrese número final: ");
+        int finalNumero = scanner.nextInt();
+        
+        System.out.println("Contando desde " + inicial + " hasta " + finalNumero + ": ");
+        if (inicial <= finalNumero) {
+            for (int i = inicial; i <= finalNumero; i++) {
+                System.out.println(i);
+            }
+        } else {
+            for (int i = inicial; i >= finalNumero; i--) {
+                System.out.println(i);
+            }
+        }
+        
+        scanner.close();
+    }
+
+}
