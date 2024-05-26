@@ -1,0 +1,14 @@
+package umg.kl.ejercicos;
+
+import java.util.Random;
+
+public class NumerosAleatorios {
+
+    public static void main(String[] args) {
+        Random random = new Random();
+  
+        int numeroAleatorio = random.nextInt(100);
+        System.out.println("Número aleatorio entre 0 y 100: " + numeroAleatorio);
+
+    }
+}
