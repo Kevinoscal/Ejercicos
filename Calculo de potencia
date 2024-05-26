@@ -1,0 +1,31 @@
+package umg.kl.ejercicos;
+
+import java.util.Scanner;
+
+public class Calculo_de_Potencia {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingrese el numero:");
+        double base = scanner.nextDouble();
+        
+        System.out.println("Ingrese el exponente:");
+        int exponente = scanner.nextInt();
+        
+        double resultado = calcularPotencia(base, exponente);
+        
+        System.out.println("El resultado" + base + " elevado a la potencia " + exponente + " es: " + resultado);
+        
+        scanner.close();
+    }
+    
+    public static double calcularPotencia(double base, int exponente) {
+        double resultado = 1;
+        for (int i = 0; i < exponente; i++) {
+            resultado *= base;
+        }
+        return resultado;
+    }
+
+}
