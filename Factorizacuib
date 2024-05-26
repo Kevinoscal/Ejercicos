@@ -1,0 +1,37 @@
+package umg.kl.ejercicos;
+
+import java.util.Scanner;
+
+public class Factorizacion {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Ingrese un número: ");
+        int numero = scanner.nextInt();
+        
+        System.out.println("Los factores" + numero + " son: ");
+        descomponerEnFactoresPrimos(numero);
+        
+        scanner.close();
+    }
+    
+    public static void descomponerEnFactoresPrimos(int numero) {
+        while (numero % 2 == 0) {
+            System.out.print(2 + " ");
+            numero /= 2;
+        }
+        
+        for (int i = 3; i <= Math.sqrt(numero); i += 2) {
+            while (numero % i == 0) {
+                System.out.print(i + " ");
+                numero /= i;
+            }
+        }
+        
+        if (numero > 2) {
+            System.out.print(numero);
+        }
+    }
+
+}
